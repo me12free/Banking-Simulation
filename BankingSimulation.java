@@ -45,7 +45,7 @@ public class BankingSimulation {
         double idleTime = 0;                        // No idle time at the start
         double serviceTime = generateServiceTime(rand); // Random service time generated for the first customer
         
-        // Add the first customer to the list with initial values
+        // Adding the first customer to the list with initial values
         customers.add(new Customer(0, 0, serviceTime, 0, serviceTime, 0, serviceTime, 0, 0));
 
         // Loop to simulate the arrival and service of remaining customers
@@ -73,7 +73,7 @@ public class BankingSimulation {
             // Queue length is 1 if the customer has to wait, otherwise 0 (no queue)
             int queueLength = waitingTime > 0 ? 1 : 0;
 
-            // Add the new customer's details to the list
+            // Adding the new customer's details to the list
             customers.add(new Customer(IAT, arrivalTime, serviceTime, serviceStartTime, serviceEndTime, waitingTime, timeInSystem, idleTime, queueLength));
         }
 
